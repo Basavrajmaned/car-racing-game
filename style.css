@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #222;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    touch-action: none;
+}
+
+.game {
+    width: 100%;
+    max-width: 500px;
+    height: 100vh;
+    margin: auto;
+    background: #111;
+    display: flex;
+    flex-direction: column;
+}
+
+.score {
+    height: 60px;
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#road {
+    position: relative;
+    flex: 1;
+    background: #555;
+    border-left: 10px solid white;
+    border-right: 10px solid white;
+    overflow: hidden;
+}
+
+.line {
+    position: absolute;
+    width: 8px;
+    height: 90px;
+    background: white;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.l1 {
+    top: 0;
+}
+
+.l2 {
+    top: 180px;
+}
+
+.l3 {
+    top: 360px;
+}
+
+.l4 {
+    top: 540px;
+}
+
+.car {
+    position: absolute;
+    width: 60px;
+    height: 100px;
+    border-radius: 12px;
+}
+
+.player {
+    background: #00aaff;
+    left: 50%;
+    bottom: 25px;
+    transform: translateX(-50%);
+}
+
+.enemy {
+    top: -120px;
+}
+
+.enemy1 {
+    background: red;
+    left: 20%;
+}
+
+.enemy2 {
+    background: yellow;
+    left: 70%;
+    top: -400px;
+}
+
+.glass {
+    position: absolute;
+    width: 40px;
+    height: 35px;
+    left: 10px;
+    top: 15px;
+    background: #bdefff;
+    border-radius: 7px;
+}
+
+.buttons {
+    height: 90px;
+    background: #111;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.buttons button {
+    width: 42%;
+    height: 55px;
+    border: 0;
+    border-radius: 12px;
+    background: #333;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    touch-action: none;
+}
+
+.buttons button:active {
+    background: #777;
+}
+
+#gameOver {
+    display: none;
+    position: fixed;
+    width: 300px;
+    max-width: 85%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    z-index: 100;
+}
+
+#gameOver h1 {
+    color: red;
+}
+
+#gameOver p {
+    font-size: 22px;
+}
+
+#again {
+    padding: 12px 25px;
+    border: 0;
+    border-radius: 8px;
+    background: #00aa44;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+
+    .score {
+        height: 55px;
+        font-size: 20px;
+    }
+
+    .buttons {
+        height: 85px;
+    }
+
+    .buttons button {
+        font-size: 15px;
+    }
+
+    .car {
+        width: 55px;
+        height: 90px;
+    }
+
+    .glass {
+        width: 36px;
+        height: 32px;
+        left: 9px;
+    }
+}

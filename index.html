@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Racing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="game">
+
+    <div class="score">
+        SCORE: <span id="score">0</span>
+    </div>
+
+    <div id="road">
+
+        <div class="line l1"></div>
+        <div class="line l2"></div>
+        <div class="line l3"></div>
+        <div class="line l4"></div>
+
+        <div id="player" class="car player">
+            <div class="glass"></div>
+        </div>
+
+        <div id="enemy1" class="car enemy enemy1">
+            <div class="glass"></div>
+        </div>
+
+        <div id="enemy2" class="car enemy enemy2">
+            <div class="glass"></div>
+        </div>
+
+    </div>
+
+    <div class="buttons">
+        <button id="left">⬅ LEFT</button>
+        <button id="right">RIGHT ➡</button>
+    </div>
+
+</div>
+
+<div id="gameOver">
+
+    <h1>GAME OVER</h1>
+
+    <p>Score: <span id="finalScore">0</span></p>
+
+    <button id="again">PLAY AGAIN</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
